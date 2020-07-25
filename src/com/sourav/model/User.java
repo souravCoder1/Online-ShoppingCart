@@ -1,6 +1,8 @@
 package com.sourav.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,11 +11,13 @@ import javax.persistence.Table;
 public class User {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String name;
 	private String mail;
 	private String pass;
 	private int ph_no;
+	
 	
 	public int getId() {
 		return id;
@@ -46,12 +50,15 @@ public class User {
 		this.ph_no = ph_no;
 	}
 		
-	public User(int id, String name, String mail, String pass, int ph_no) {
-		super();
-		this.id = id;
+	public User(String name, String mail, String pass, int ph_no) {
 		this.name = name;
 		this.mail = mail;
 		this.pass = pass;
 		this.ph_no = ph_no;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", mail=" + mail + ", pass=" + pass + ", ph_no=" + ph_no + "]";
+	}
+	
 }
