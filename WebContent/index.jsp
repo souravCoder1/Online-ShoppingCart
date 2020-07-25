@@ -6,7 +6,8 @@
 
 <html>
 <head>
-<title>Welcome</title>
+<title>Shopping Cart</title>
+<%@include file="components/common_js_css.jsp" %>
 </head>
 	<body>
 		<h1>hi</h1>
