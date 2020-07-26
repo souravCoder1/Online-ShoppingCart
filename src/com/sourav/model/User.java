@@ -1,6 +1,8 @@
 package com.sourav.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,11 +11,14 @@ import javax.persistence.Table;
 public class User {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
 	private String mail;
 	private String pass;
-	private int ph_no;
+	private String ph_no;
+	private String address;
+	private String uType;
 	
 	public int getId() {
 		return id;
@@ -39,19 +44,32 @@ public class User {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
-	public int getPh_no() {
+	public String getPh_no() {
 		return ph_no;
 	}
-	public void setPh_no(int ph_no) {
+	public void setPh_no(String ph_no) {
 		this.ph_no = ph_no;
+	}	
+	public String getAddress() {
+		return address;
 	}
-		
-	public User(int id, String name, String mail, String pass, int ph_no) {
-		super();
-		this.id = id;
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	
+	public String getuType() {
+		return uType;
+	}
+	public void setuType(String uType) {
+		this.uType = uType;
+	}
+	
+	public User(String name, String mail, String pass, String ph_no, String address, String uType) {
 		this.name = name;
 		this.mail = mail;
 		this.pass = pass;
 		this.ph_no = ph_no;
+		this.address=address;
+		this.uType=uType;
 	}
 }

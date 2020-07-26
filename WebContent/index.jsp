@@ -1,4 +1,3 @@
-
 <%@page import="com.sourav.main.Shopping"%>
 <%@page language="java" contentType="text/html; charset=ISO-8859-1" %>
 
@@ -10,7 +9,12 @@
 <%@include file="components/common_js_css.jsp" %>
 </head>
 	<body>
+
+		<%@include file="components/navbar.jsp" %>
 		<h1>hi</h1>
-		<%= Shopping.getSessionFactory() %>
+		<% Shopping.getSessionFactory(); %>
+		<% Shopping.getSessionFactory(); %>
+		<% Shopping.getSessionFactory(); %>
+		
 	</body>
 </html>
