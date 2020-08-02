@@ -12,6 +12,7 @@
 		<div class="row mt-5">
 			<div class="col-md-4 offset-md-4">
 				<div class="card">
+					<%@include file="components/message.jsp" %>
 					<div class="card-header custom-bg text-white">
 					   <h3>Login Here!!</h3>
 					</div>
@@ -19,12 +20,12 @@
 						<form action="login" method="post">
 							  <div class="form-group">
 							    <label for="exampleInputEmail1">Email address</label>
-							    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+							    <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
 							    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 							  </div>
 							  <div class="form-group">
 							    <label for="exampleInputPassword1">Password</label>
-							    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+							    <input type="password" class="form-control" name="password" placeholder="Password">
 							  </div>
 							  <a href="reg.jsp" class="d-block">If not registered click here</a>
 							  <div class="container text-center">
