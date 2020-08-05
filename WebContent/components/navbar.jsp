@@ -1,3 +1,7 @@
+<%@page import="com.sourav.model.User"%>
+<%
+	User user1=(User)session.getAttribute("current-user");
+%>
 <nav class="navbar navbar-expand-lg navbar-dark custom-bg">
   <div class="container">
   <a class="navbar-brand" href="#">Mycart</a>
@@ -22,14 +26,32 @@
         </div>
       </li>
     </ul>
-    <ul class="navbar-nav ml-auto">
-	  <li class="nav-item active">
-        <a class="nav-link" href="login.jsp">Login </a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="reg.jsp">Registration </a>
-      </li>
-	</ul>
+    <%
+    	if(user1==null){
+    %>
+    		<ul class="navbar-nav ml-auto">
+				  <li class="nav-item active">
+			        <a class="nav-link" href="login.jsp">Login </a>
+			      </li>
+			      <li class="nav-item active">
+			        <a class="nav-link" href="reg.jsp">Registration </a>
+			      </li>
+			</ul>
+    <%
+
+    	} else{
+    %>
+    		<ul class="navbar-nav ml-auto">
+				  <li class="nav-item active">
+			        <a class="nav-link" href="#"> <%= user1.getName() %> </a>
+			      </li>
+			      <li class="nav-item active">
+			        <a class="nav-link" href="Logoutservlet">Login </a>
+			      </li>
+			</ul>
+    <%
+    	}
+    %>
   </div>
   </div>
 </nav>
