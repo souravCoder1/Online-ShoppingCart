@@ -22,6 +22,64 @@
 </head>
 	<body>
 	    <%@include file="components/navbar.jsp" %>
-	    
+	    <div class="container">
+	    	<div class="row mt-3">
+	    		<div class="col md-4">
+	    			<div class="card">
+	    				<div class="card-body text-center">
+	    					<div class="container">
+		    					<img class="text-uppercase text-muted" alt="users" class="img-fluid rounded-circle" src="image/team.png">
+		    				</div>
+	    					<h1>Users</h1>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="col md-4">
+	    			<div class="card">
+	    				<div class="card-body text-center">
+	    					<div class="container">
+		    					<img alt="Categories" class="img-fluid rounded-circle" src="image/list.png">
+		    				</div>
+	    					<h1 class="text-uppercase text-muted">Categories</h1>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="col md-4">
+	    			<div class="card">
+	    				<div class="card-body text-center">
+		    				<div class="container">
+		    					<img style="max-width: " alt="Products" class="img-fluid rounded-circle" src="image/buy.png">
+		    				</div>
+	    					<h1 class="text-uppercase text-muted">Products</h1>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="row mt-3">
+	    		<div class="col md-6">
+	    			<div class="card">
+	    				<div class="card-body text-center">
+	    					<div class="container">
+		    					<img alt="users" class="img-fluid rounded-circle" src="image/grid.png">
+		    				</div>
+		    				<p class="mt-2">click here to add new category</p>
+	    					<h1 class="text-uppercase text-muted">Add Category</h1>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="col md-6">
+	    			<div class="card">
+	    				<div class="card-body text-center">
+	    					<div class="container">
+		    					<img alt="" class="img-fluid rounded-circle" src="image/product.png">
+		    				</div>
+		    				<p class="mt-2">click here to add new product</p>
+	    					<h1 class="text-uppercase text-muted">Add Product</h1>
+	    				</div>
+	    			</div>
+	    		</div>
+	    	<div>
+	    	</div>
+	    </div>
 	</body>
 </html>
