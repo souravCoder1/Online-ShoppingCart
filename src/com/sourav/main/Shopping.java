@@ -14,7 +14,6 @@ public class Shopping {
 			throw new ExceptionInInitializerError(ex);
 		}
 	}
-
 	public static SessionFactory getSessionFactory() {
 		return sessionFactory;
 	}
