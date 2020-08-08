@@ -46,7 +46,7 @@
 			        <a class="nav-link" href="#"> <%= user1.getName() %> </a>
 			      </li>
 			      <li class="nav-item active">
-			        <a class="nav-link" href="Logoutservlet">Login </a>
+			        <a class="nav-link" href="Logoutservlet">Log out</a>
 			      </li>
 			</ul>
     <%

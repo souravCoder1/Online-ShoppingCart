@@ -8,15 +8,16 @@
 <body>
 
     <%@include file="components/navbar.jsp" %>
+    <%@include file="components/message.jsp" %>
 	<div class="container-fluid">
 		<div class="row mt-5">
 			<div class="col-md-4 offset-md-4">
-				<div class="card">
-					<%@include file="components/message.jsp" %>
+				<div class="card mt-3">
+
 					<div class="card-header custom-bg text-white">
-					   <h3>Login Here!!</h3>
+					   <h4>Login Here!!</h4>
 					</div>
-					<div class="class-body">
+					<div class="card-body">
 						<form action="login" method="post">
 							  <div class="form-group">
 							    <label for="exampleInputEmail1">Email address</label>
@@ -27,10 +28,12 @@
 							    <label for="exampleInputPassword1">Password</label>
 							    <input type="password" class="form-control" name="password" placeholder="Password">
 							  </div>
-							  <a href="reg.jsp" class="d-block">If not registered click here</a>
+							  
 							  <div class="container text-center">
-							  	<button type="submit" class="btn btn-outline-warning">Submit</button>
-							  	<button type="reset" class="btn btn-outline-warning">Reset</button>
+							  	<a href="reg.jsp" class="d-block">If not registered click here</a>
+							  	<br>
+							  	<button type="submit" class="btn btn-primary custom-bg">Submit</button>
+							  	<button type="reset" class="btn btn-primary custom-bg border-0">Reset</button>
 							  </div>
 						</form>
 					</div>

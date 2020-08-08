@@ -19,36 +19,37 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 	<title>Admin</title>
+	<%@include file="components/common_js_css.jsp" %>
 </head>
 	<body>
 	    <%@include file="components/navbar.jsp" %>
 	    <div class="container admin">
 	    	<div class="row mt-3">
-	    		<div class="col md-4">
+	    		<div class="col-md-4">
 	    			<div class="card">
 	    				<div class="card-body text-center">
 	    					<div class="container">
-		    					<img class="text-uppercase text-muted" alt="users" class="img-fluid rounded-circle" src="image/team.png">
+		    					<img style="max-width:100px;" class="text-uppercase text-muted" alt="users" class="img-fluid rounded-circle" src="image/team.png">
 		    				</div>
 	    					<h1>Users</h1>
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="col md-4">
+	    		<div class="col-md-4">
 	    			<div class="card">
 	    				<div class="card-body text-center">
 	    					<div class="container">
-		    					<img alt="Categories" class="img-fluid rounded-circle" src="image/list.png">
+		    					<img style="max-width:100px;" alt="Categories" class="img-fluid rounded-circle" src="image/list.png">
 		    				</div>
 	    					<h1 class="text-uppercase text-muted">Categories</h1>
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="col md-4">
+	    		<div class="col-md-4">
 	    			<div class="card">
 	    				<div class="card-body text-center">
 		    				<div class="container">
-		    					<img style="max-width: " alt="Products" class="img-fluid rounded-circle" src="image/buy.png">
+		    					<img style="max-width:100px;" alt="Products" class="img-fluid rounded-circle" src="image/buy.png">
 		    				</div>
 	    					<h1 class="text-uppercase text-muted">Products</h1>
 	    				</div>
@@ -56,22 +57,22 @@
 	    		</div>
 	    	</div>
 	    	<div class="row mt-3">
-	    		<div class="col md-6">
+	    		<div class="col-md-6">
 	    			<div class="card" data-toggle="modal" data-target="#add-category-modal">
 	    				<div class="card-body text-center">
 	    					<div class="container">
-		    					<img alt="users" class="img-fluid rounded-circle" src="image/grid.png">
+		    					<img style="max-width:100px;" alt="users" class="img-fluid rounded-circle" src="image/grid.png">
 		    				</div>
 		    				<p class="mt-2">click here to add new category</p>
 	    					<h1 class="text-uppercase text-muted">Add Category</h1>
 	    				</div>
 	    			</div>
 	    		</div>
-	    		<div class="col md-6">
+	    		<div class="col-md-6">
 	    			<div class="card">
 	    				<div class="card-body text-center">
 	    					<div class="container">
-		    					<img alt="" class="img-fluid rounded-circle" src="image/product.png">
+		    					<img style="max-width:100px;" alt="" class="img-fluid rounded-circle" src="image/product.png">
 		    				</div>
 		    				<p class="mt-2">click here to add new product</p>
 	    					<h1 class="text-uppercase text-muted">Add Product</h1>
@@ -99,18 +100,21 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	        <form>
+	        <form action="ProductOperationServlet" method="post">
 	        	<div class="form-group">
+	        		<input type="text" class="form-control" name="" placeholder="Enter Category ID">
+	        	</div>
+	        	<div class="form-group">
+	        		<textarea style="height:300px" class="form-control" placeholder="Enter Category Description" name="" required></textarea>
+	        	</div>
+	        	<div class="container text-center">
+	        		<button class="btn btn-outline-success">Add Category</button>
+	        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	        	</div>
 	        </form>
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-	        <button type="button" class="btn btn-primary">Save changes</button>
 	      </div>
 	    </div>
 	  </div>
 	</div>
-	<!-- Add Category Modal -->
 	</body>
 </html>

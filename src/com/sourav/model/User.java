@@ -64,6 +64,10 @@ public class User {
 		this.uType = uType;
 	}
 	
+	public User() {
+		super();
+	}
+	
 	public User(String name, String mail, String pass, String ph_no, String address, String uType) {
 		this.name = name;
 		this.mail = mail;

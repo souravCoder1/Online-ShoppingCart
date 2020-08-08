@@ -18,8 +18,7 @@ public class UserDao {
 	public User getValidUser(String mail,String pass) {
 		User user=null;
 		
-		String query="from user where mail=:m and pass=:p";
-		
+		String query="from User where mail=:m and pass=:p";
 		Session session=factory.openSession();
 		Query q=session.createQuery(query);
 		q.setParameter("m", mail);

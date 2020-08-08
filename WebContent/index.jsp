@@ -12,9 +12,6 @@
 
 		<%@include file="components/navbar.jsp" %>
 		<h1>hi</h1>
-		<% Shopping.getSessionFactory(); %>
-		<% Shopping.getSessionFactory(); %>
-		<% Shopping.getSessionFactory(); %>
 		
 	</body>
 </html>
