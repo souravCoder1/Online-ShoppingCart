@@ -22,7 +22,7 @@
 </head>
 	<body>
 	    <%@include file="components/navbar.jsp" %>
-	    <div class="container">
+	    <div class="container admin">
 	    	<div class="row mt-3">
 	    		<div class="col md-4">
 	    			<div class="card">
@@ -57,7 +57,7 @@
 	    	</div>
 	    	<div class="row mt-3">
 	    		<div class="col md-6">
-	    			<div class="card">
+	    			<div class="card" data-toggle="modal" data-target="#add-category-modal">
 	    				<div class="card-body text-center">
 	    					<div class="container">
 		    					<img alt="users" class="img-fluid rounded-circle" src="image/grid.png">
@@ -81,5 +81,36 @@
 	    	<div>
 	    	</div>
 	    </div>
+	</div>    
+		<!-- Add Category Modal -->
+	    <!-- Button trigger modal 
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-category-modal">
+	  Launch demo modal
+	</button> -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="add-category-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header custom-bg text-white">
+	        <h5 class="modal-title" id="exampleModalLabel">Fill Category Details</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form>
+	        	<div class="form-group">
+	        	</div>
+	        </form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- Add Category Modal -->
 	</body>
 </html>
