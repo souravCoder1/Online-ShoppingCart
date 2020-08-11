@@ -72,7 +72,7 @@
 	    			</div>
 	    		</div>
 	    		<div class="col-md-6">
-	    			<div class="card">
+	    			<div class="card" data-toggle="modal" data-target="#add-product-modal">
 	    				<div class="card-body text-center">
 	    					<div class="container">
 		    					<img style="max-width:100px;" alt="" class="img-fluid rounded-circle" src="image/product.png">
@@ -92,7 +92,7 @@
 	  Launch demo modal
 	</button> -->
 
-	<!-- Modal -->
+	<!-- Category Modal -->
 	<div class="modal fade" id="add-category-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
@@ -109,10 +109,55 @@
 	        		<input type="text" class="form-control" name="cattitle" placeholder="Enter Category Title">
 	        	</div>
 	        	<div class="form-group">
-	        		<textarea style="height:300px" class="form-control" placeholder="Enter Category Description" name="catdesc" required></textarea>
+	        		<textarea style="height:200px" class="form-control" placeholder="Enter Category Description" name="catdesc" required></textarea>
 	        	</div>
 	        	<div class="container text-center">
 	        		<button class="btn btn-outline-success">Add Category</button>
+	        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	        	</div>
+	        </form>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<!-- Product Modal -->
+	
+	<div class="modal fade" id="add-product-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header custom-bg text-white">
+	        <h5 class="modal-title" id="exampleModalLabel">Fill Product Details</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <form action="productOperationServlet" method="post">
+	        	<input type="hidden" name="operation" value="addproduct">
+	        	<div class="form-group">
+	        		<input type="text" class="form-control" name="pname" placeholder="Enter Product Title">
+	        	</div>
+	        	<div class="form-group">
+	        		<textarea style="height:200px" class="form-control" placeholder="Enter Product Description" name="pdesc" required></textarea>
+	        	</div>
+	        	<div class="form-group">
+	        		<input type="text" class="form-control" name="pprice" placeholder="Enter Product Price">
+	        	</div>
+	        	<div class="form-group">
+	        		<input type="text" class="form-control" name="pdiscount" placeholder="Enter Product Discount">
+	        	</div>
+	        	<div class="form-group">
+	        		<input type="text" class="form-control" name="pQuantity" placeholder="Enter Product Quantity">
+	        	</div>
+	        	<select id="cars" name="cars">
+				  <option value="volvo">Volvo</option>
+				  <option value="saab">Saab</option>
+				  <option value="fiat">Fiat</option>
+				  <option value="audi">Audi</option>
+				</select>
+	        	<div class="container text-center">
+	        		<button class="btn btn-outline-success">Add Product</button>
 	        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 	        	</div>
 	        </form>
