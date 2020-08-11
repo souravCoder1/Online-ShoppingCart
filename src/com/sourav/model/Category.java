@@ -44,6 +44,9 @@ public class Category {
 		this.catdesc = catdesc;
 		this.p = p;
 	}
+	public Category() {
+		// TODO Auto-generated constructor stub
+	}
 	
 	
 }

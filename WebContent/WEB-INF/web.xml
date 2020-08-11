@@ -22,4 +22,13 @@
 	  <servlet-name>login</servlet-name>
 	  <url-pattern>/login</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+	  <servlet-name>category</servlet-name>
+	  <servlet-class>com.sourav.servlet.CategoryOperationServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	  <servlet-name>category</servlet-name>
+	  <url-pattern>/categoryOperationServlet</url-pattern>
+	</servlet-mapping>
 </web-app>

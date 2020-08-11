@@ -24,6 +24,9 @@
 	<body>
 	    <%@include file="components/navbar.jsp" %>
 	    <div class="container admin">
+	  		<div class="container-fluid">
+	  			<%@include file="components/message.jsp" %>
+	  		</div>
 	    	<div class="row mt-3">
 	    		<div class="col-md-4">
 	    			<div class="card">
@@ -100,12 +103,13 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	        <form action="ProductOperationServlet" method="post">
+	        <form action="categoryOperationServlet" method="post">
+	        	<input type="hidden" name="operation" value="addcategory">
 	        	<div class="form-group">
-	        		<input type="text" class="form-control" name="" placeholder="Enter Category ID">
+	        		<input type="text" class="form-control" name="catid" placeholder="Enter Category ID">
 	        	</div>
 	        	<div class="form-group">
-	        		<textarea style="height:300px" class="form-control" placeholder="Enter Category Description" name="" required></textarea>
+	        		<textarea style="height:300px" class="form-control" placeholder="Enter Category Description" name="catdesc" required></textarea>
 	        	</div>
 	        	<div class="container text-center">
 	        		<button class="btn btn-outline-success">Add Category</button>
