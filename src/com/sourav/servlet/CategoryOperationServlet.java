@@ -21,11 +21,11 @@ public class CategoryOperationServlet extends HttpServlet {
 		
 		String type=request.getParameter("operation");
 		if(type.trim().equals("addcategory")) {
-			String title=request.getParameter("catid");			
+			String title=request.getParameter("cattitle");			
 			String desc=request.getParameter("catdesc");
 			Category cat=new Category();
-			cat.setCattitle(title);
-			cat.setCatdesc(desc);
+			cat.setCattitle("title");
+			cat.setCatdesc("desc");
 			CategoryDao categoryDao=new CategoryDao(Shopping.getSessionFactory());
 			int catId=categoryDao.saveCategory(cat);
 			HttpSession session=request.getSession();

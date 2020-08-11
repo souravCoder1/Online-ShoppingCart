@@ -106,7 +106,7 @@
 	        <form action="categoryOperationServlet" method="post">
 	        	<input type="hidden" name="operation" value="addcategory">
 	        	<div class="form-group">
-	        		<input type="text" class="form-control" name="catid" placeholder="Enter Category ID">
+	        		<input type="text" class="form-control" name="cattitle" placeholder="Enter Category Title">
 	        	</div>
 	        	<div class="form-group">
 	        		<textarea style="height:300px" class="form-control" placeholder="Enter Category Description" name="catdesc" required></textarea>
