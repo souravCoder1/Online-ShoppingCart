@@ -1,3 +1,7 @@
+<%@page import="java.util.List"%>
+<%@page import="com.sourav.model.Category"%>
+<%@page import="com.sourav.main.Shopping"%>
+<%@page import="com.sourav.dao.CategoryDao"%>
 <%@page import="com.sourav.model.User"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%
@@ -133,7 +137,9 @@
 	        </button>
 	      </div>
 	      <div class="modal-body">
-	        <form action="productOperationServlet" method="post">
+	        <form action="categoryOperationServlet" method="post" enctype="multipart/form-data">
+	        	<input type="hidden" name="operation" value="addproduct"/>
+	        
 	        	<input type="hidden" name="operation" value="addproduct">
 	        	<div class="form-group">
 	        		<input type="text" class="form-control" name="pname" placeholder="Enter Product Title">
@@ -150,12 +156,26 @@
 	        	<div class="form-group">
 	        		<input type="text" class="form-control" name="pQuantity" placeholder="Enter Product Quantity">
 	        	</div>
-	        	<select id="cars" name="cars">
-				  <option value="volvo">Volvo</option>
-				  <option value="saab">Saab</option>
-				  <option value="fiat">Fiat</option>
-				  <option value="audi">Audi</option>
-				</select>
+	        	<%
+	        		CategoryDao cdao = new CategoryDao(Shopping.getSessionFactory());
+	        		List<Category> list=cdao.getCategory();
+	        	%>
+	        	<div class="form-group">
+		        	<select id="" name="catid" class="form-control">
+		        	  <%
+		        	  		for(Category c:list){
+		        	  %>
+		        	  
+					  <option value="volvo"><%=c.getCattitle() %></option>
+					  
+					  <%
+		        	  	}
+					  %>
+					</select>
+				</div>
+				<div class="form-group">
+	        		Select Pictures for Product <input type="file" id="pPhoto" required/>
+	        	</div>
 	        	<div class="container text-center">
 	        		<button class="btn btn-outline-success">Add Product</button>
 	        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

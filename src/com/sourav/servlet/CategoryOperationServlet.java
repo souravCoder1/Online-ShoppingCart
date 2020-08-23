@@ -2,6 +2,7 @@ package com.sourav.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +15,7 @@ import com.sourav.dao.CategoryDao;
 import com.sourav.main.Shopping;
 import com.sourav.model.Category;
 
+@MultipartConfig
 public class CategoryOperationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -32,7 +34,7 @@ public class CategoryOperationServlet extends HttpServlet {
 			session.setAttribute("message","Category Added:"+catId);
 			response.sendRedirect("admin.jsp");
 		}
-		else {
+		else if(type.trim().equals("addproduct")){
 			
 		}
 		

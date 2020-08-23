@@ -1,9 +1,15 @@
 package com.sourav.dao;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Query;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+
 
 import com.sourav.model.Category;
 
@@ -21,5 +27,11 @@ public class CategoryDao {
 		transtion.commit();
 		session.clear();
 		return catId;
+	}
+	public List<Category> getCategory(){
+		Session s= factory.openSession();
+		Query query=s.createQuery("from Category");
+		List<Category> l=query.getResultList();
+		return l;
 	}
 }
